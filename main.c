@@ -10,9 +10,13 @@ GtkWidget       *main_page;
 GtkWidget       *register_page;
 GtkWidget       *register_page1;
 GtkWidget       *client_page;
+GtkWidget       *login_page;
 
-int main(int argc, char *argv[])
-{
+GtkCssProvider  *provider;
+GdkScreen       *screen;
+GdkDisplay      *display;
+
+int main(int argc, char *argv[]){
 
   gtk_init(&argc, &argv);
 
@@ -25,7 +29,15 @@ int main(int argc, char *argv[])
   register_page = GTK_WIDGET(gtk_builder_get_object(builder, "register_page"));
   client_page = GTK_WIDGET(gtk_builder_get_object(builder, "client_page"));
   register_page1 = GTK_WIDGET(gtk_builder_get_object(builder, "register_page1"));
+  login_page = GTK_WIDGET(gtk_builder_get_object(builder, "login_page"));
   gtk_builder_connect_signals(builder, NULL);
+
+  //stlyesheet connecting part
+  provider = gtk_css_provider_new();
+  display = gdk_display_get_default();
+  screen = gdk_display_get_default_screen (display);
+  gtk_style_context_add_provider_for_screen (screen, GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_USER);
+  gtk_css_provider_load_from_path(GTK_CSS_PROVIDER(provider),"style.css",NULL);
 
   g_object_unref(builder);
 
@@ -36,14 +48,19 @@ int main(int argc, char *argv[])
 }
 
 // called when window is closed
-void on_window_main_destroy()
+void on_main_page_destroy()
 {
   gtk_main_quit();
 }
 
-void on_register_clicked()
+void on_login_btn_clicked()
 {
     gtk_widget_hide(main_page);
+    gtk_widget_show(login_page);  
+}
+void on_reg_clicked()
+{
+    gtk_widget_hide(login_page);
     gtk_widget_show(register_page);  
 }
 void on_back_clicked()
@@ -51,10 +68,15 @@ void on_back_clicked()
 	gtk_widget_hide(register_page);
 	gtk_widget_show(main_page);
 }
-void on_user_clicked()
+void on_user_reg_clicked()
 {
 	gtk_widget_hide(main_page);
 	gtk_widget_show(register_page1);
+}
+void on_main_clicked()
+{
+  gtk_widget_hide(login_page);
+  gtk_widget_show(main_page);
 }
 void on_back2_clicked()
 {
