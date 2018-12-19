@@ -317,16 +317,24 @@
   <object class="GtkWindow" id="client_page">
     <property name="name">client</property>
     <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Client Registration</property>
     <property name="default_width">640</property>
     <property name="default_height">480</property>
     <child>
       <object class="GtkGrid">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="margin_left">10</property>
+        <property name="margin_right">10</property>
+        <property name="margin_top">10</property>
+        <property name="margin_bottom">10</property>
+        <property name="row_spacing">5</property>
+        <property name="column_spacing">5</property>
         <child>
           <object class="GtkBox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="hexpand">True</property>
             <child>
               <placeholder/>
             </child>
@@ -460,61 +468,6 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="halign">end</property>
-            <property name="margin_right">30</property>
-            <property name="hexpand">True</property>
-          </object>
-          <packing>
-            <property name="left_attach">2</property>
-            <property name="top_attach">7</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkEntry">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="halign">end</property>
-            <property name="margin_right">30</property>
-          </object>
-          <packing>
-            <property name="left_attach">2</property>
-            <property name="top_attach">6</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkCalendar">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="halign">end</property>
-            <property name="margin_right">30</property>
-            <property name="year">2018</property>
-            <property name="month">11</property>
-            <property name="day">20</property>
-          </object>
-          <packing>
-            <property name="left_attach">2</property>
-            <property name="top_attach">5</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkCalendar">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="halign">end</property>
-            <property name="margin_right">30</property>
-            <property name="year">2018</property>
-            <property name="month">11</property>
-            <property name="day">20</property>
-          </object>
-          <packing>
-            <property name="left_attach">2</property>
-            <property name="top_attach">4</property>
-          </packing>
-        </child>
-        <child>
           <object class="GtkBox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
@@ -526,6 +479,7 @@
                 <property name="receives_default">True</property>
                 <property name="halign">end</property>
                 <property name="margin_right">10</property>
+                <property name="margin_top">10</property>
                 <property name="hexpand">True</property>
               </object>
               <packing>
@@ -540,7 +494,8 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="halign">start</property>
+                <property name="halign">end</property>
+                <property name="margin_top">10</property>
                 <property name="hexpand">True</property>
                 <signal name="clicked" handler="on_back_main" swapped="no"/>
               </object>
@@ -564,32 +519,20 @@
             <property name="margin_right">30</property>
           </object>
           <packing>
-            <property name="left_attach">2</property>
-            <property name="top_attach">3</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkEntry">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="halign">end</property>
-            <property name="margin_right">30</property>
-          </object>
-          <packing>
-            <property name="left_attach">2</property>
-            <property name="top_attach">2</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkEntry">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="halign">end</property>
-            <property name="margin_right">30</property>
-          </object>
-          <packing>
-            <property name="left_attach">2</property>
+            <property name="left_attach">3</property>
             <property name="top_attach">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="halign">end</property>
+            <property name="margin_right">30</property>
+          </object>
+          <packing>
+            <property name="left_attach">3</property>
+            <property name="top_attach">0</property>
           </packing>
         </child>
         <child>
@@ -598,6 +541,18 @@
             <property name="can_focus">False</property>
             <property name="hexpand">True</property>
             <property name="vexpand">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">2</property>
+            <property name="top_attach">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="halign">end</property>
+            <property name="margin_right">30</property>
           </object>
           <packing>
             <property name="left_attach">3</property>
@@ -612,8 +567,63 @@
             <property name="margin_right">30</property>
           </object>
           <packing>
-            <property name="left_attach">2</property>
-            <property name="top_attach">0</property>
+            <property name="left_attach">3</property>
+            <property name="top_attach">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCalendar">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="halign">end</property>
+            <property name="margin_right">30</property>
+            <property name="year">2018</property>
+            <property name="month">11</property>
+            <property name="day">20</property>
+          </object>
+          <packing>
+            <property name="left_attach">3</property>
+            <property name="top_attach">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCalendar">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="halign">end</property>
+            <property name="margin_right">30</property>
+            <property name="year">2018</property>
+            <property name="month">11</property>
+            <property name="day">20</property>
+          </object>
+          <packing>
+            <property name="left_attach">3</property>
+            <property name="top_attach">5</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="halign">end</property>
+            <property name="margin_right">30</property>
+          </object>
+          <packing>
+            <property name="left_attach">3</property>
+            <property name="top_attach">6</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="halign">end</property>
+            <property name="margin_right">30</property>
+            <property name="hexpand">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">3</property>
+            <property name="top_attach">7</property>
           </packing>
         </child>
         <child>
@@ -866,6 +876,7 @@
   <object class="GtkWindow" id="register_page">
     <property name="name">hotel</property>
     <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Registration</property>
     <property name="default_width">640</property>
     <property name="default_height">480</property>
     <child>
@@ -1265,14 +1276,7 @@
       </object>
     </child>
     <child type="titlebar">
-      <object class="GtkLabel" id="register_pages">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes">Registration</property>
-        <style>
-          <class name="n n n "/>
-        </style>
-      </object>
+      <placeholder/>
     </child>
   </object>
   <object class="GtkWindow" id="register_page1">
