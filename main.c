@@ -66,7 +66,7 @@ void on_reg_clicked()
 void on_back_clicked()
 {
 	gtk_widget_hide(register_page);
-	gtk_widget_show(main_page);
+	gtk_widget_show(login_page);
 }
 void on_user_reg_clicked()
 {
@@ -78,17 +78,12 @@ void on_main_clicked()
   gtk_widget_hide(login_page);
   gtk_widget_show(main_page);
 }
-void on_back2_clicked()
-{
-	gtk_widget_hide(client_page);
-	gtk_widget_show(main_page);
-}
-void on_register_click()
+void on_reg_btn_clicked()
 {
 	gtk_widget_hide(register_page1);
 	gtk_widget_show(client_page);
 }
-void on_back_back()
+void on_back_info_clicked()
 {
 	gtk_widget_hide(register_page1);
 	gtk_widget_show(main_page);
@@ -96,5 +91,5 @@ void on_back_back()
 void on_back_main()
 {
 	gtk_widget_hide(client_page);
-	gtk_widget_show(main_page);
+	gtk_widget_show(register_page1);
 }

@@ -1,8 +1,20 @@
 #login{
-	background: #E1BEE7;
+	background: url('images/00003.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 #main_page{
-	background: url('images/1.jpg');
+	background: url('images/00004.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#hotel_page{
+	background: url('images/00003.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#hotel{
+	background: url('images/00003.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 }

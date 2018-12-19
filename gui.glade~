@@ -284,7 +284,7 @@
             <property name="can_focus">True</property>
             <property name="halign">center</property>
             <property name="valign">start</property>
-            <property name="margin_top">180</property>
+            <property name="margin_top">120</property>
             <property name="margin_bottom">10</property>
             <property name="placeholder_text" translatable="yes">Username</property>
           </object>
@@ -380,26 +380,21 @@
       <object class="GtkBox" id="admin">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
         <child>
-          <object class="GtkButton" id="login_btn">
-            <property name="label" translatable="yes">Admin</property>
-            <property name="width_request">200</property>
-            <property name="height_request">30</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="halign">center</property>
-            <property name="valign">center</property>
-            <property name="margin_left">50</property>
-            <property name="margin_right">40</property>
-            <property name="border_width">0</property>
-            <signal name="clicked" handler="on_login_btn_clicked" swapped="no"/>
-          </object>
-          <packing>
-            <property name="expand">True</property>
-            <property name="fill">False</property>
-            <property name="position">0</property>
-          </packing>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
         </child>
         <child>
           <object class="GtkButton" id="user_reg">
@@ -409,16 +404,50 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
-            <property name="halign">center</property>
-            <property name="valign">center</property>
-            <property name="margin_right">50</property>
+            <property name="halign">start</property>
+            <property name="valign">start</property>
+            <property name="margin_left">20</property>
+            <property name="margin_right">40</property>
+            <property name="margin_top">10</property>
+            <property name="margin_bottom">25</property>
             <signal name="clicked" handler="on_user_reg_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="expand">True</property>
+            <property name="expand">False</property>
             <property name="fill">False</property>
-            <property name="position">1</property>
+            <property name="pack_type">end</property>
+            <property name="position">5</property>
           </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="login_btn">
+            <property name="label" translatable="yes">Admin</property>
+            <property name="width_request">200</property>
+            <property name="height_request">30</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="halign">start</property>
+            <property name="valign">end</property>
+            <property name="margin_left">20</property>
+            <property name="margin_right">40</property>
+            <property name="margin_top">10</property>
+            <property name="margin_bottom">6</property>
+            <property name="border_width">0</property>
+            <signal name="clicked" handler="on_login_btn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="pack_type">end</property>
+            <property name="position">6</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
         </child>
       </object>
     </child>
@@ -427,6 +456,7 @@
     </child>
   </object>
   <object class="GtkWindow" id="register_page">
+    <property name="name">hotel</property>
     <property name="can_focus">False</property>
     <property name="default_width">640</property>
     <property name="default_height">480</property>
@@ -435,6 +465,7 @@
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="valign">center</property>
+        <property name="margin_bottom">50</property>
         <property name="hexpand">True</property>
         <property name="vexpand">True</property>
         <property name="row_spacing">3</property>
@@ -476,6 +507,9 @@
           <object class="GtkTextView">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="margin_left">5</property>
+            <property name="margin_right">50</property>
+            <property name="hexpand">True</property>
             <property name="justification">fill</property>
           </object>
           <packing>
@@ -488,6 +522,9 @@
           <object class="GtkTextView">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="margin_left">5</property>
+            <property name="margin_right">50</property>
+            <property name="hexpand">True</property>
           </object>
           <packing>
             <property name="left_attach">1</property>
@@ -499,6 +536,8 @@
           <object class="GtkTextView">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="margin_left">5</property>
+            <property name="margin_right">50</property>
             <property name="hexpand">True</property>
             <property name="wrap_mode">word-char</property>
             <property name="justification">right</property>
@@ -566,22 +605,12 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="4">
-            <property name="label" translatable="yes">Back</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <signal name="clicked" handler="on_back_clicked" swapped="no"/>
-          </object>
-          <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">16</property>
-          </packing>
-        </child>
-        <child>
           <object class="GtkTextView">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="margin_left">5</property>
+            <property name="margin_right">50</property>
+            <property name="hexpand">True</property>
           </object>
           <packing>
             <property name="left_attach">1</property>
@@ -592,6 +621,9 @@
           <object class="GtkTextView">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="margin_left">5</property>
+            <property name="margin_right">50</property>
+            <property name="hexpand">True</property>
           </object>
           <packing>
             <property name="left_attach">1</property>
@@ -602,6 +634,9 @@
           <object class="GtkTextView">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="margin_left">5</property>
+            <property name="margin_right">50</property>
+            <property name="hexpand">True</property>
           </object>
           <packing>
             <property name="left_attach">1</property>
@@ -612,6 +647,9 @@
           <object class="GtkTextView">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="margin_left">5</property>
+            <property name="margin_right">50</property>
+            <property name="hexpand">True</property>
           </object>
           <packing>
             <property name="left_attach">1</property>
@@ -622,10 +660,29 @@
           <object class="GtkTextView">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="margin_left">5</property>
+            <property name="margin_right">50</property>
+            <property name="hexpand">True</property>
           </object>
           <packing>
             <property name="left_attach">1</property>
             <property name="top_attach">15</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="4">
+            <property name="label" translatable="yes">Back</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="margin_left">100</property>
+            <property name="margin_right">50</property>
+            <property name="margin_bottom">70</property>
+            <signal name="clicked" handler="on_back_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">17</property>
           </packing>
         </child>
         <child>
@@ -634,11 +691,129 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <property name="margin_left">100</property>
+            <property name="margin_right">50</property>
+            <property name="margin_top">10</property>
+            <property name="margin_bottom">5</property>
           </object>
           <packing>
-            <property name="left_attach">0</property>
+            <property name="left_attach">1</property>
             <property name="top_attach">16</property>
           </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
         </child>
         <child>
           <placeholder/>
@@ -693,6 +868,7 @@
     </child>
   </object>
   <object class="GtkWindow" id="register_page1">
+    <property name="name">hotel_page</property>
     <property name="can_focus">False</property>
     <property name="default_width">640</property>
     <property name="default_height">480</property>
@@ -831,31 +1007,19 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton">
-            <property name="label" translatable="yes">button</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-          </object>
-          <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">8</property>
-          </packing>
-        </child>
-        <child>
           <object class="GtkLabel">
             <property name="name">hotel</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="halign">end</property>
             <property name="valign">center</property>
-            <property name="margin_right">26</property>
+            <property name="margin_right">30</property>
             <property name="hexpand">True</property>
             <property name="label" translatable="yes">hotel</property>
             <property name="justify">right</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
+            <property name="left_attach">2</property>
             <property name="top_attach">0</property>
           </packing>
         </child>
@@ -864,12 +1028,14 @@
             <property name="name">country</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="halign">center</property>
+            <property name="halign">end</property>
             <property name="valign">center</property>
+            <property name="margin_right">30</property>
+            <property name="hexpand">True</property>
             <property name="label" translatable="yes">country</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
+            <property name="left_attach">2</property>
             <property name="top_attach">1</property>
           </packing>
         </child>
@@ -878,12 +1044,14 @@
             <property name="name">adress</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="halign">center</property>
+            <property name="halign">end</property>
             <property name="valign">center</property>
+            <property name="margin_right">30</property>
+            <property name="hexpand">True</property>
             <property name="label" translatable="yes">adress</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
+            <property name="left_attach">2</property>
             <property name="top_attach">2</property>
           </packing>
         </child>
@@ -892,12 +1060,14 @@
             <property name="name">description</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="halign">center</property>
+            <property name="halign">end</property>
             <property name="valign">center</property>
+            <property name="margin_right">30</property>
+            <property name="hexpand">True</property>
             <property name="label" translatable="yes">description</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
+            <property name="left_attach">2</property>
             <property name="top_attach">3</property>
           </packing>
         </child>
@@ -906,12 +1076,14 @@
             <property name="name">night room</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="halign">center</property>
+            <property name="halign">end</property>
             <property name="valign">center</property>
+            <property name="margin_right">30</property>
+            <property name="hexpand">True</property>
             <property name="label" translatable="yes">room</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
+            <property name="left_attach">2</property>
             <property name="top_attach">4</property>
           </packing>
         </child>
@@ -920,12 +1092,14 @@
             <property name="name">room night</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="halign">center</property>
+            <property name="halign">end</property>
             <property name="valign">center</property>
+            <property name="margin_right">30</property>
+            <property name="hexpand">True</property>
             <property name="label" translatable="yes">room</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
+            <property name="left_attach">2</property>
             <property name="top_attach">5</property>
           </packing>
         </child>
@@ -934,12 +1108,14 @@
             <property name="name">room</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="halign">center</property>
+            <property name="halign">end</property>
             <property name="valign">center</property>
+            <property name="margin_right">30</property>
+            <property name="hexpand">True</property>
             <property name="label" translatable="yes">room</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
+            <property name="left_attach">2</property>
             <property name="top_attach">6</property>
           </packing>
         </child>
@@ -948,26 +1124,93 @@
             <property name="name">room</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="halign">center</property>
+            <property name="halign">end</property>
             <property name="valign">center</property>
+            <property name="margin_right">30</property>
+            <property name="hexpand">True</property>
             <property name="label" translatable="yes">room</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
+            <property name="left_attach">2</property>
             <property name="top_attach">7</property>
           </packing>
         </child>
         <child>
-          <object class="GtkButton">
-            <property name="label" translatable="yes">button</property>
+          <object class="GtkButton" id="back_info">
+            <property name="label" translatable="yes">Back</property>
+            <property name="name">back_info</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <property name="margin_left">70</property>
+            <property name="margin_right">30</property>
+            <signal name="clicked" handler="on_back_info_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="left_attach">1</property>
+            <property name="left_attach">2</property>
+            <property name="top_attach">9</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="reg_btn">
+            <property name="label" translatable="yes">Register</property>
+            <property name="name">Register</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="margin_left">70</property>
+            <property name="margin_right">30</property>
+            <signal name="clicked" handler="on_reg_btn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left_attach">2</property>
             <property name="top_attach">8</property>
           </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
         </child>
       </object>
     </child>
