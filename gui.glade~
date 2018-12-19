@@ -231,7 +231,15 @@
           </packing>
         </child>
         <child>
-          <placeholder/>
+          <object class="GtkScrollbar">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+          </object>
+          <packing>
+            <property name="left_attach">2</property>
+            <property name="top_attach">6</property>
+          </packing>
         </child>
         <child>
           <placeholder/>

@@ -3,7 +3,11 @@
 #include<stdlib.h>
 #include<string.h>
 #include <gtk/gtk.h>   
-
+//IPC
+#include <sys/types.h>
+#include <sys/ipc.h>
+#include <sys/shm.h>
+#define SHMSZ
 //creating objects
 GtkBuilder      *builder; 
 GtkWidget       *main_page;
@@ -13,7 +17,26 @@ GtkWidget       *client_page;
 
 int main(int argc, char *argv[])
 {
+	
+//IPC
+ int shmit,i;
+ key_t key;
+ char *shm, *s;
+ key = 1000;
+ if((shm= shmget(key, SHMSZ, IPC_CREAT | 0666)) <0)
+ {
+ 	perror("shmget");
+ 	exit(1);
+ }
+ if ((shm =shmat(shmid, NULL, 0)) ==(char *)-1)
+ {
+ 	perror("shmat");
+ 	exit(1);
+ }
+*shm !="*";
 
+shmid = shmdt(shm);
+exit(0);
   gtk_init(&argc, &argv);
 
   //adding glade file to our builder
