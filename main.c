@@ -15,37 +15,35 @@ GtkWidget       *register_page;
 GtkWidget       *register_page1;
 GtkWidget       *client_page;
 GtkWidget       *login_page;
+GtkWidget       *compleated_page;
 
-<<<<<<< HEAD
-int main(int argc, char *argv[])
-{
+// int main(int argc, char *argv[])
+// {
 	
-//IPC
- int shmit,i;
- key_t key;
- char *shm, *s;
- key = 1000;
- if((shm= shmget(key, SHMSZ, IPC_CREAT | 0666)) <0)
- {
- 	perror("shmget");
- 	exit(1);
- }
- if ((shm =shmat(shmid, NULL, 0)) ==(char *)-1)
- {
- 	perror("shmat");
- 	exit(1);
- }
-*shm !="*";
-=======
+// //IPC
+// //  int shmit,i;
+// //  key_t key;
+// //  char *shm, *s;
+// //  key = 1000;
+// //  if((shm= shmget(key, SHMSZ, IPC_CREAT | 0666)) <0)
+// //  {
+// //  	perror("shmget");
+// //  	exit(1);
+// //  }
+// //  if ((shm =shmat(shmid, NULL, 0)) ==(char *)-1)
+// //  {
+// //  	perror("shmat");
+// //  	exit(1);
+// //  }
+// // *shm !="*";
+// }
+
 GtkCssProvider  *provider;
 GdkScreen       *screen;
 GdkDisplay      *display;
 
 int main(int argc, char *argv[]){
->>>>>>> 1a1b428c72be0d724b8fa9fea7768c1d4d38c57d
 
-shmid = shmdt(shm);
-exit(0);
   gtk_init(&argc, &argv);
 
   //adding glade file to our builder
@@ -58,6 +56,7 @@ exit(0);
   client_page = GTK_WIDGET(gtk_builder_get_object(builder, "client_page"));
   register_page1 = GTK_WIDGET(gtk_builder_get_object(builder, "register_page1"));
   login_page = GTK_WIDGET(gtk_builder_get_object(builder, "login_page"));
+  compleated_page = GTK_WIDGET(gtk_builder_get_object(builder, "compleated_page"));
   gtk_builder_connect_signals(builder, NULL);
 
   //stlyesheet connecting part
@@ -120,4 +119,14 @@ void on_back_main()
 {
 	gtk_widget_hide(client_page);
 	gtk_widget_show(register_page1);
+}
+void on_save_clicked()
+{
+  gtk_widget_hide(register_page);
+  gtk_widget_show(compleated_page);
+}
+void on_done_button_clicked()
+{
+  gtk_widget_hide(compleated_page);
+  gtk_widget_show(main_page);
 }
